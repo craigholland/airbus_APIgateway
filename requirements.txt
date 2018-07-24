@@ -1,0 +1,14 @@
+# This requirements file lists all third-party dependencies for this project.
+#
+# Run 'pip install -r requirements.txt -t lib/' to install these dependencies
+# in `lib/` subdirectory.
+#
+# Note: The `lib` directory is added to `sys.path` by `appengine_config.py`.
+pyramid==1.5.1
+cachepy==0.1
+blinker==1.4
+google-endpoints>=1.1
+python-dateutil>=1.11
+enum34>=1.1
+
+
