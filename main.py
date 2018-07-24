@@ -1,8 +1,10 @@
-"""`main` is the top level module  of airbus Gateway."""
+"""`main` is the top level module of airbus Shopping Gateway API."""
 
 # Import the Pyramid Framework
 from pyramid.config import Configurator
 from pyramid.response import Response
+
+import os
 
 
 config = Configurator()
@@ -10,8 +12,10 @@ config = Configurator()
 
 def root_page(request):
     """Main Page."""
-
-    return Response('Fuck Off World API')
+    env = ''
+    for k, v in os.environ.iteritems():
+        env += '{0}: {1}<br>'.format(k, v)
+    return Response(env)
 
 
 _routes = [
